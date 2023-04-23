@@ -21,6 +21,6 @@ public class Addition {
 
     @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "eventID")
+    @JoinColumn(name = "event_id")
     private Event event;
 }

@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ua.nure.bachelor.ticktrip.domain.event.model.Event;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
@@ -22,7 +20,6 @@ public class Ticket {
     @NotNull
     private UUID id;
 
-    @Column(name = "userId")
     private String userId;
 
     private LocalDateTime eventDateTime;
@@ -32,9 +29,8 @@ public class Ticket {
     @Enumerated(EnumType.STRING)
     private TicketState state;
 
-    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "sittingId")
+    @JoinColumn(name = "sitting_id")
     private Seat seat;
 
 }

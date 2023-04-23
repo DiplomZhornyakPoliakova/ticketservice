@@ -35,7 +35,7 @@ public class Event {
 
     @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "typeName")
+    @JoinColumn(name = "type_name")
     private EventType typeName;
 
     @JsonIgnore

@@ -27,9 +27,8 @@ public class Seat {
 
     private Double price;
 
-    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "eventID", referencedColumnName = "id")
+    @JoinColumn(name = "event_id", referencedColumnName = "id")
     private Event event;
 
     @JsonIgnore
