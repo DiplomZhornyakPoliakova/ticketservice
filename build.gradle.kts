@@ -34,6 +34,7 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("org.postgresql:postgresql")
     implementation("io.micronaut:micronaut-validation")
+    implementation("com.google.zxing:core:3.5.1")
 
 }
 

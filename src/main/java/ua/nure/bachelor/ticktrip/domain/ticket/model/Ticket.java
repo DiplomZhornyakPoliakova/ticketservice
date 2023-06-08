@@ -1,9 +1,10 @@
 package ua.nure.bachelor.ticktrip.domain.ticket.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ua.nure.bachelor.ticktrip.domain.seat.model.Seat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
@@ -21,8 +22,6 @@ public class Ticket {
     private UUID id;
 
     private String userId;
-
-    private LocalDateTime eventDateTime;
 
     private LocalDateTime transactionDateTime;
 

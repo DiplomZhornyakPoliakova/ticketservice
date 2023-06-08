@@ -4,10 +4,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ua.nure.bachelor.ticktrip.domain.ticket.model.Seat;
+import ua.nure.bachelor.ticktrip.domain.seat.model.Seat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -29,9 +30,15 @@ public class Event {
 
     private String venue;
 
+    private String city;
+
     private String photo;
 
-    private UUID scheduleId;
+    private LocalDateTime startTime;
+
+    private LocalDateTime endTime;
+
+    private Integer numberOfTickets;
 
     @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)

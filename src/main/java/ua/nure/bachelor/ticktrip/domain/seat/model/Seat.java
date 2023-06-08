@@ -1,10 +1,11 @@
-package ua.nure.bachelor.ticktrip.domain.ticket.model;
+package ua.nure.bachelor.ticktrip.domain.seat.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ua.nure.bachelor.ticktrip.domain.event.model.Event;
+import ua.nure.bachelor.ticktrip.domain.ticket.model.Ticket;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

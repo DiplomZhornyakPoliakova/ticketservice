@@ -29,4 +29,10 @@ public class TicketController {
 
         return ticketRepository.findByUserId(userId);
     }
+
+    @Get("/seat/event={eventId}")
+    public Long countSeatsInSoldTickets(UUID eventId) {
+
+        return ticketRepository.countSeatsInSoldTickets(eventId);
+    }
 }

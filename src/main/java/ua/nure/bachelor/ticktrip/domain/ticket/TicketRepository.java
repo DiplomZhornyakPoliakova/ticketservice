@@ -12,4 +12,6 @@ public interface TicketRepository extends JpaRepository<Ticket, UUID> {
 
     List<Ticket> findByUserId(String userId);
 
+    Long countSeatsInSoldTickets(UUID eventId);
+
 }
